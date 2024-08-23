@@ -1,0 +1,9 @@
+<mat-toolbar color="secondary">
+  <span>Currency Exchange Rates</span>
+  <div class="rates">
+    <span class="rates-item"
+      ><strong>USD/UAH:</strong> {{ usdRate() | number: '1.2-2' }}</span
+    >
+    <span><strong>EUR/UAH:</strong> {{ eurRate() | number: '1.2-2' }}</span>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,8 @@
+.rates-item:not(:last-child) {
+  margin: 0 10px 0 0;
+}
+
+mat-toolbar {
+  margin-bottom: 30px;
+  justify-content: space-between;
+}

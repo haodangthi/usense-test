@@ -1,0 +1,51 @@
+<mat-card>
+  <div class="currency-converter">
+    <mat-form-field appearance="outline">
+      <mat-label>From</mat-label>
+      <input
+        matInput
+        type="number"
+        [ngModel]="firstAmount()"
+        (ngModelChange)="onFirstAmountChange($event)"
+        placeholder="Enter amount"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Currency</mat-label>
+      <mat-select
+        [value]="firstCurrency()"
+        (selectionChange)="onFirstCurrencyChange($event.value)"
+      >
+        <mat-option *ngFor="let currency of currencies" [value]="currency">
+          {{ currency }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="currency-converter">
+    <mat-form-field appearance="outline">
+      <mat-label>To</mat-label>
+      <input
+        matInput
+        type="number"
+        [ngModel]="secondAmount()"
+        (ngModelChange)="onSecondAmountChange($event)"
+        placeholder="Converted amount"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Currency</mat-label>
+      <mat-select
+        [value]="secondCurrency()"
+        (selectionChange)="onSecondCurrencyChange($event.value)"
+      >
+        <mat-option *ngFor="let currency of currencies" [value]="currency">
+          {{ currency }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</mat-card>
